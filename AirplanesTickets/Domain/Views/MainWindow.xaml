@@ -1,0 +1,47 @@
+﻿<Window x:Class="AirplanesTickets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirplanesTickets" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Icon="/Icon/Ticket.png"
+        ResizeMode="NoResize"
+        Title="                                                               BUTA AIRWAYS       " Height="341" Width="829">
+    <Canvas>
+        <Image Source="\Icon\buta_airways.jpeg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="829" Height="325"/>
+        <Label Content="   CITIES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="45" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" ></Label>
+        <ComboBox ItemsSource="{Binding AllCities}" SelectedItem="{Binding SelectedCity}" FontSize="17" Canvas.Left="24" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Center" Width="123" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectedCityCommand}"></i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <Label Content="    AIR PLANES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="211" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="119" />
+        <ComboBox IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AllAirplanes}" SelectedItem="{Binding SelectedAirplane}" FontSize="17" Canvas.Left="202" Canvas.Top="54" Width="137" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectedAirplaneCommand}"></i:InvokeCommandAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <Label Content="   SCHEDLES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="66" Canvas.Top="127" HorizontalAlignment="Left" VerticalAlignment="Center" Width="96" />
+        <ComboBox IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AllSchedules}" SelectedItem="{Binding SelectedSchedule}" FontSize="17" Canvas.Left="24" Canvas.Top="166" Width="175" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Label Content="   PILOT INFORMATION"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="350" Canvas.Top="58" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" />
+
+        <TextBlock Text="{Binding PilotName}" FontSize="20" Canvas.Left="396" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Text="{Binding PilotSurname}" FontSize="20" Canvas.Left="396" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+        <Label Content="   TYPES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="76" Canvas.Top="222" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="33" />
+        <ComboBox    IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AllFlightTypes}" SelectedItem="{Binding SelectedFlightType}" FontSize="17" Canvas.Left="60" Canvas.Top="269" Width="139" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button   Background="Green"  FontStyle="Oblique"   IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding PurchaseCommand}" Content="Purchase" FontSize="20" Height="66" Width="160" HorizontalAlignment="Center" Canvas.Top="211" VerticalAlignment="Top" Canvas.Left="290" Click="Button_Click"></Button>
+        <GroupBox Header="------------TICKETS----------" FontSize="20" Height="245" Width="272" Canvas.Left="531" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"/>
+        <Label Content="{Binding TicketCity}" FontSize="18" Canvas.Left="544" Canvas.Top="47" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Content="{Binding TicketAirplane}" FontSize="18" Canvas.Left="657" Canvas.Top="47" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        <Label Content="{Binding TicketDate}" FontSize="18" Canvas.Left="541" Canvas.Top="88" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+        <Label Content="{Binding TicketFlightType}" FontSize="18" Canvas.Left="544" Canvas.Top="124" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+        <Label Content="Pilot Info" FontSize="19" Canvas.Left="543" Canvas.Top="160" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <TextBlock Text="{Binding TicketPName}" FontSize="20" Canvas.Left="547" Canvas.Top="204" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+        <TextBlock Text="{Binding TicketPSurname}" FontSize="20" Canvas.Left="682" Canvas.Top="204" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+    </Canvas>
+</Window>
