@@ -167,7 +167,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AirplanesDB.sql" />
     <Content Include="DataAccess\DbFirstModel\AirplanesDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AirplanesDbModel.edmx</DependentUpon>

@@ -9,7 +9,7 @@
         ResizeMode="NoResize"
         Title="                                                               BUTA AIRWAYS       " Height="341" Width="829">
     <Canvas>
-        <Image Source="\Icon\buta_airways.jpeg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" Width="829" Height="325"/>
+        <Image Source="\Icon\buta_airways.jpeg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top" Width="829" Height="400"/>
         <Label Content="   CITIES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="45" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" ></Label>
         <ComboBox ItemsSource="{Binding AllCities}" SelectedItem="{Binding SelectedCity}" FontSize="17" Canvas.Left="24" Canvas.Top="54" HorizontalAlignment="Left" VerticalAlignment="Center" Width="123" >
             <i:Interaction.Triggers>
@@ -34,7 +34,7 @@
         <TextBlock Text="{Binding PilotSurname}" FontSize="20" Canvas.Left="396" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
         <Label Content="   TYPES"  FontStyle="Italic"  Background="LightBlue" FontSize="15" Canvas.Left="76" Canvas.Top="222" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="33" />
         <ComboBox    IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AllFlightTypes}" SelectedItem="{Binding SelectedFlightType}" FontSize="17" Canvas.Left="60" Canvas.Top="269" Width="139" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Button   Background="Green"  FontStyle="Oblique"   IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding PurchaseCommand}" Content="Purchase" FontSize="20" Height="66" Width="160" HorizontalAlignment="Center" Canvas.Top="211" VerticalAlignment="Top" Canvas.Left="290" Click="Button_Click"></Button>
+        <Button   Background="Green"  FontStyle="Oblique"   IsEnabled="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding PurchaseCommand}" Content="Purchase" FontSize="20" Height="66" Width="160" HorizontalAlignment="Center" Canvas.Top="211" VerticalAlignment="Top" Canvas.Left="290" ></Button>
         <GroupBox Header="------------TICKETS----------" FontSize="20" Height="245" Width="272" Canvas.Left="531" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"/>
         <Label Content="{Binding TicketCity}" FontSize="18" Canvas.Left="544" Canvas.Top="47" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
         <Label Content="{Binding TicketAirplane}" FontSize="18" Canvas.Left="657" Canvas.Top="47" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>

@@ -9,5 +9,8 @@ namespace AirplanesTickets.DataAccess.Abstractions
 {
     public interface IFlightTypesRepository : IRepository<FlightType>
     {
+
     }
+
+
 }

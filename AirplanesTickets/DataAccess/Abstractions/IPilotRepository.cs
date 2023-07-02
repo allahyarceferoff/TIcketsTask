@@ -9,5 +9,6 @@ namespace AirplanesTickets.DataAccess.Abstractions
 {
     public interface IPilotRepository : IRepository<Pilot>
     {
+
     }
 }
