@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Amin\Source\Repos\AirplanesTickets1\AirplanesTickets\DataAccess\DbFirstModel\AirplanesDbModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\ZenBook\OneDrive - ITM STEP MMC\Desktop\AirplanesTickets-master\AirplanesTickets\DataAccess\DbFirstModel\AirplaneDBModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

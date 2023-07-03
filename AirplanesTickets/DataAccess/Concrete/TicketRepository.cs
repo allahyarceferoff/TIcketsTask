@@ -12,11 +12,11 @@ namespace AirplanesTickets.DataAccess.Concrete
 {
     public class TicketRepository : ITicketsRepository
     {
-        public AirplanesDBEntities _context { get; set; }
+        public AirplanesDBEntities1 _context { get; set; }
 
         public TicketRepository()
         {
-            _context = new AirplanesDBEntities();
+            _context = new AirplanesDBEntities1();
         }
         public void AddData(Ticket data)
         {

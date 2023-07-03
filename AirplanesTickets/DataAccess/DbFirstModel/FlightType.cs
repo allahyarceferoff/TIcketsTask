@@ -25,10 +25,5 @@ namespace AirplanesTickets.DataAccess.DbFirstModel
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Tickets { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Type}";
-        }
     }
 }

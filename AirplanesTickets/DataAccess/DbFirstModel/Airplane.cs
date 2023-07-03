@@ -11,7 +11,7 @@ namespace AirplanesTickets.DataAccess.DbFirstModel
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Airplane
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,19 +19,14 @@ namespace AirplanesTickets.DataAccess.DbFirstModel
         {
             this.Tickets = new HashSet<Ticket>();
         }
-
+    
         public int Id { get; set; }
         public string Model { get; set; }
         public int PassengerCount { get; set; }
         public int PilotId { get; set; }
-
+    
         public virtual Pilot Pilot { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Tickets { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Model}";
-        }
     }
 }

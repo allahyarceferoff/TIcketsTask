@@ -11,11 +11,11 @@ namespace AirplanesTickets.DataAccess.Concrete
 {
     public class FlightTypesRepository : IFlightTypesRepository
     {
-        public AirplanesDBEntities _context { get; set; }
+        public AirplanesDBEntities1 _context { get; set; }
 
         public FlightTypesRepository()
         {
-            _context = new AirplanesDBEntities();
+            _context = new AirplanesDBEntities1();
         }
         public void AddData(FlightType data)
         {

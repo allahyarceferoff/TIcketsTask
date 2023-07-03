@@ -93,37 +93,37 @@
     <Compile Include="DataAccess\Concrete\ScheduleRepository.cs" />
     <Compile Include="DataAccess\Concrete\TicketRepository.cs" />
     <Compile Include="DataAccess\DbFirstModel\Airplane.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DbFirstModel\AirplanesDbModel.Context.cs">
+    <Compile Include="DataAccess\DbFirstModel\AirplaneDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AirplanesDbModel.Context.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DbFirstModel\AirplanesDbModel.cs">
+    <Compile Include="DataAccess\DbFirstModel\AirplaneDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DbFirstModel\AirplanesDbModel.Designer.cs">
+    <Compile Include="DataAccess\DbFirstModel\AirplaneDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AirplanesDbModel.edmx</DependentUpon>
+      <DependentUpon>AirplaneDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DbFirstModel\City.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DbFirstModel\FlightType.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DbFirstModel\Pilot.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DbFirstModel\Schedule.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\DbFirstModel\Ticket.cs">
-      <DependentUpon>AirplanesDbModel.tt</DependentUpon>
+      <DependentUpon>AirplaneDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\MainViewModel.cs" />
@@ -150,12 +150,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DataAccess\DbFirstModel\AirplanesDbModel.edmx">
+    <EntityDeploy Include="DataAccess\DbFirstModel\AirplaneDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AirplanesDbModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>AirplaneDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataAccess\DbFirstModel\AirplanesDbModel.edmx.diagram">
-      <DependentUpon>AirplanesDbModel.edmx</DependentUpon>
+    <None Include="DataAccess\DbFirstModel\AirplaneDBModel.edmx.diagram">
+      <DependentUpon>AirplaneDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -167,16 +167,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataAccess\DbFirstModel\AirplanesDbModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AirplanesDbModel.edmx</DependentUpon>
-      <LastGenOutput>AirplanesDbModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataAccess\DbFirstModel\AirplanesDbModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AirplanesDbModel.edmx</DependentUpon>
-      <LastGenOutput>AirplanesDbModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Icon\buta_airways.jpeg" />
     <Resource Include="Icon\TicketBackground.png" />
     <Resource Include="Icon\Ticket.png" />
@@ -184,6 +174,18 @@
   <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\DbFirstModel\AirplaneDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirplaneDBModel.edmx</DependentUpon>
+      <LastGenOutput>AirplaneDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccess\DbFirstModel\AirplaneDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AirplaneDBModel.edmx</DependentUpon>
+      <LastGenOutput>AirplaneDBModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

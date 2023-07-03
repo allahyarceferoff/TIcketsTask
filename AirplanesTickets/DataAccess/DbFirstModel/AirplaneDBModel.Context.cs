@@ -13,10 +13,10 @@ namespace AirplanesTickets.DataAccess.DbFirstModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AirplanesDBEntities : DbContext
+    public partial class AirplanesDBEntities1 : DbContext
     {
-        public AirplanesDBEntities()
-            : base("name=AirplanesDBEntities")
+        public AirplanesDBEntities1()
+            : base("name=AirplanesDBEntities1")
         {
         }
     
